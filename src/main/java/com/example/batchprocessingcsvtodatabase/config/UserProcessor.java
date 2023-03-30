@@ -22,7 +22,7 @@ public class UserProcessor implements ItemProcessor<UserInput, User> {
                 .email(userInput.getEmail())
                 .country(userInput.getCountry())
                 .build();
-
+System.out.println("Test==>"+user);
         //mapper.save(user)
         
         return user;
