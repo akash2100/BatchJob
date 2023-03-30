@@ -23,8 +23,8 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.core.task.TaskExecutor;
 
-@Configuration // Informs Spring that this class contains configurations
-@EnableBatchProcessing // Enables batch processing for the application
+@Configuration 
+@EnableBatchProcessing 
 @RequiredArgsConstructor
 public class BatchConfiguration {
 
@@ -49,7 +49,7 @@ public class BatchConfiguration {
         lineTokenizer.setDelimiter(",");
         lineTokenizer.setStrict(false);
         lineTokenizer.setNames(
-                "personId","firstName","lastName","email","gender","birthday","country"
+                "firstName","lastName","email","gender","birthday","country"
         );
 
         BeanWrapperFieldSetMapper<UserInput> fieldSetMapper = new BeanWrapperFieldSetMapper<>();
